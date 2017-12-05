@@ -7,7 +7,6 @@ import {
   FlatList,
   ActivityIndicator
 } from "react-native";
-import { Toolbar } from "react-native-material-ui";
 import MovieCard from "./MovieCard";
 
 // create a component
@@ -26,7 +25,7 @@ class MovieList extends Component {
               loadProfile={() => navigate("MovieProfile", movieItem.item)}
             />
           )}
-          onRefresh={() => screenProps.refresh(1)}
+          onRefresh={() => screenProps.refresh(screenProps.type, 1)}
           onEndReached={() => screenProps.loadMore()}
           onEndReachedThreshold={0.05}
           refreshing={screenProps.loading}

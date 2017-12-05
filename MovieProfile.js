@@ -2,8 +2,6 @@
 import React, { Component } from "react";
 import { Image, View, Text, StyleSheet, Dimensions } from "react-native";
 
-const { width, height } = Dimensions.get("window");
-
 // create a component
 class MovieProfile extends Component {
   render() {
@@ -27,18 +25,19 @@ class MovieProfile extends Component {
 }
 
 // define your styles
+const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
   image: {
     alignItems: "center",
     justifyContent: "center",
     flexWrap: "nowrap",
-    width: this.width,
-    height: 630
+    width: width,
+    height: height
   },
   textContainer: {
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     position: "absolute",
-    bottom: 0,
+    bottom: 30,
     marginHorizontal: 8,
     padding: 8,
     borderTopLeftRadius: 4,
